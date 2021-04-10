@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>
+            Js4
+        </title>
+    </head>
+    <body>
+        <script>
+            const inventors=[
+                {
+                    first:'rishabh',
+                    last:'bhardwaj',
+                    year:1879,
+                    passed:1955,
+                },
+                {
+                    first:'jay',
+                    last:'pratap',
+                    year:1643,
+                    passed:1727,
+                },
+                {
+                    first:'Akshat',
+                    last:'shukla',
+                    year:1564,
+                    passed:1642,
+                },
+                {
+                    first:'Rohit',
+                    last:'Sharmas',
+                    year:1867,
+                    passed:1934,
+                },
+                {
+                    first:'lavanya',
+                    last:'Sharmas',
+                    year:1571,
+                    passed:1630,
+                },
+                {
+                    first:'lavanya',
+                    last:'Sharmas',
+                    year:1473,
+                    passed:1543,
+                },
+                {
+                    first:'lavanya',
+                    last:'Sharmas',
+                    year:1858,
+                    passed:1947,
+                },
+            ];
+           // console.log(inventors['first');
+            const people=['rishabh bhardwaj','jay pratap singh','Lavanya agnihotri','sahil sharma','ajay kumar','anshika','aditi  bhardwaj'];4
+            const fifteen=inventors.filter(function(inventor)
+            {
+                if(inventor.year>=1500&&inventor.year<=1600)
+                {
+                    return true;
+                }
+             
+               
+            });
+            const fullnames=inventors.map(inventor => inventor.first+inventor.last);
+            const ordered=inventors.sort((a,b)=> a.year>b.year?1:-1);
+            console.table(ordered);
+            const total=inventors.reduce((total,inventor)=>
+            {
+                return total +(inventor.passed-inventor.year);
+            },0);
+            console.log(total);
+            const category=document.querySelector('.mw-category');
+            const links=Array.from(category.document.querySelectorAll('a'));
+            console.log(category);
+
+        </script>
+    </body>
+</html>
